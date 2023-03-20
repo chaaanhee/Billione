@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- head -->
+<th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
+<!-- page css -->
+<!-- main slider css -->
+<link th:href="@{/css/customer/main/main-slider.css}" rel="stylesheet"/>
+<!-- page script -->
+<script th:src="@{/js/slider.js}" defer></script>
+</head>
+
+<body>
+<!-- header -->
+<th:block th:replace="~{/customer/fragments/common/header :: header}"></th:block>
+
+<div class="contents">
+    <div id="main-slider">
+    <div class="slider-wrap">
+        <div class="cont"><img th:src="@{/img/banner/main-slider-banner01.jpeg}"></div>
+        <div class="cont"><img th:src="@{/img/banner/main-slider-banner02.jpeg}"></div>
+        <div class="cont"><img th:src="@{/img/banner/main-slider-banner03.jpeg}"></div>
+        <div class="cont"><img th:src="@{/img/banner/main-slider-banner04.jpeg}"></div>
+        <div class="cont"><img th:src="@{/img/banner/main-slider-banner05.jpeg}"></div>
+    </div> <!-- /slider-wrap -->
+    </div> <!-- /main-slider -->
+
+    <div class="container artc">
+        <div class="inner flex justify-space-between py-1-5">
+            <p>본문 본문 본문</p>
+        </div> <!-- /inner -->
+    </div> <!-- /container -->
+
+
+</div> <!-- /contents -->
+
+<div id="footer">
+    <th:block th:replace="~{/customer/fragments/common/footer :: footer}"></th:block>
+</div><!-- /#footer -->
+
+<script>
+</script>
+</body>
+</html>

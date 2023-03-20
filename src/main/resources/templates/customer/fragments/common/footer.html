@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<footer th:fragment="footer" class="Sec_footer" >
+    <nav class="division artc foot_border">
+        <div class="inner flex justify-space-between">
+            <div class="links-about">
+                <a href="/access-term" target="_blank" class="terms">이용약관</a>
+                <a href="/policy" target="_blank" class="privacy">개인정보처리방침</a>
+                <a href="/business-information" target="_blank" class="business">사업자정보확인</a>
+                <a href="https://www.brandiinc.com/recruit/" target="_blank" rel="noreferrer noopener" class="recruiter">인재채용</a>
+                <a href="https://pf.kakao.com/_pSxoZu" target="_blank" class="join">입점문의</a>
+                <a href="http://admin.brandi.co.kr" target="_blank" class="admin">셀러어드민</a>
+            </div> <!-- /links-about -->
+            <div class="links-social"><a href="/faq" class="question">자주묻는 질문</a>
+                <a href="https://pf.kakao.com/_xexkxcxkl" target="_blank" rel="noreferrer noopener" class="kakao">플러스친구</a>
+                <a href="https://www.facebook.com/brandiapp/" target="_blank" rel="noreferrer noopener" class="facebook">페이스북</a>
+                <a href="https://www.instagram.com/brandi__official" target="_blank" rel="noreferrer noopener" class="instagram">인스타그램</a>
+            </div> <!-- /links-social -->
+        </div> <!-- /inner -->
+    </nav>
+    <div class="division artc">
+        <div class="inner flex justify-space-between align-items-center">
+            <div class="infos-company">
+                <a th:href="@{/}"><h1 id="foot-logo" th:text="'Billione'"></h1></a>
+                <div id="billione-info" class="infos">
+                    <div class="bundle"><span class="part">대표이사 : 박하나</span>
+                        <span class="part">사업자등록번호 : 123-45-67890</span>
+                        <span class="part">통신판매업신고 : 2016-서울강남-00359</span>
+                    </div> <!--/bundle -->
+                    <div class="bundle"><span class="part">호스팅사업자 : (주)빌리원</span>
+                        <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동)</span>
+                    </div> <!--/bundle -->
+                </div> <!-- /billione-info -->
+                <p class="alert">빌리원은 통신판매중개자로서 통신판매 당사자가 아니며, 판매자가 등록한 상품정보 및 거래에 빌리원은 책임을 지지 않습니다.</p>
+            </div> <!-- /infos-company -->
+
+            <div class="infos-cs">
+                <h2 class="tit-h1">고객센터 <a href="tel:15666575" class="cs-tel">1234-5678</a></h2>
+                <div class="info">
+                    <h3 class="tit-h2">영업시간</h3>
+                    <div class="contact_time">AM 10:00 ~ PM 17:00
+                        <span>(주말 및 공휴일 휴무)</span></div>
+                </div> <!-- /info -->
+                <div class="info">
+                    <h3 class="tit-h2">점심시간</h3>
+                    <div class="contact_time">PM 12:30 ~ PM 13:30</div>
+                </div> <!-- /info -->
+                <div class="info">
+                    <h3 class="tit-h2">고객문의</h3>
+                    <a href="mailto:billione@billione.co.kr" class="cs-email">billione@billione.co.kr</a>
+                </div> <!-- /info -->
+            </div> <!-- /infos-cs -->
+        </div><!-- /inner -->
+        <div class="copyright"><p>Copyright Billione All Rights Reserved.</p>
+        </div><!-- /Copyright -->
+    </div> <!-- /division -->
+</footer>
+
+</html>

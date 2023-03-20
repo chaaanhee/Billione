@@ -1,0 +1,100 @@
+#detail-top .product-gallery, #detail-top .detail-info {
+    flex : 1;
+}
+#detail-top > .flex {
+    column-gap: 4rem;
+}
+
+#detail-top .detail-info fieldset > div{
+    padding : .5rem 0;
+}
+#detail-top .detail-info #detail-prod-name{
+    font-size: 26px;
+    line-height: 1.38;
+}
+#detail-top .detail-info #detail-price-area .detail-price .rate{
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: #ff204b;
+    font-weight: bold;
+    }
+#detail-top .detail-info #detail-price-area .detail-price .price{
+    font-size: 2.5rem;
+    line-height: 1.1;
+    font-weight: bold;
+    vertical-align: middle;
+}
+#detail-top .detail-info #detail-price-area .detail-price .price span{
+    vertical-align: middle;
+    font-size: 1.8rem;
+}
+#detail-top .detail-info #detail-price-area .detail-price .cost{
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 1.3rem;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+#detail-top .detail-info #detail-price-area .detail-coupon a.coupon-btn{
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+}
+#detail-top .detail-info .point-area span{
+    display: inline-block;
+    margin-top: 6px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    background: #fff6e5;
+    font-weight: 700;
+    line-height: 19px;
+    color: #ff9500;
+    font-size: 1.1rem;
+ }
+
+#detail-top .detail-info .review-area .total-reviews{
+    text-decoration: underline;
+}
+#detail-top .detail-info .shipping-area{
+    border-bottom: 1px solid #EBEEF2;
+    border-top: 1px solid #EBEEF2;
+}
+#detail-top .detail-info .shipping-area .delivery-info{
+    font-weight : bold;
+}
+/* price-area */
+#detail-top .detail-info .total-price-area dl.wrap-price dt{
+    font-size: 1.5rem;
+}
+#detail-top .detail-info .total-price-area dl.wrap-price dd{
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #ff204b;
+    vertical-align: middle;
+}
+#detail-top .detail-info .total-price-area dl.wrap-price dd span{
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+/* cart btn */
+#detail-top .detail-info #button-area a{
+    position: relative;
+    min-width: 62px;
+    min-height: 62px;
+    border: 1px solid #e3e5e8;
+    border-radius: 6px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    }
+#detail-top .detail-info #button-area a span.txt {
+    display : none;
+}
+#detail-top .detail-info #button-area .check-out-btn{
+    border-radius: 10px;
+}

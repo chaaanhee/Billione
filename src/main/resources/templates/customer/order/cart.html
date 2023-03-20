@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- head -->
+<th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
+<!-- main slider css -->
+<link th:href="@{/css/customer/page/product-detail.css}" rel="stylesheet"/>
+<!-- page css -->
+</head>
+
+<body>
+<!-- header -->
+<th:block th:replace="~{/customer/fragments/common/header :: header}"></th:block>
+
+<div class="contents">
+
+    <div class="container artc my-2">
+        <div class="inner flex justify-center direction-column">
+            <div class="title">
+                <h2>장바구니</h2>
+            </div> <!-- /title -->
+            <div id="datail-top">
+
+
+            </div>  <!-- / detail-top -->
+
+        </div> <!-- /inner -->
+    </div> <!-- /container -->
+
+
+</div> <!-- /contents -->
+
+<div id="footer">
+    <th:block th:replace="~{/customer/fragments/common/footer :: footer}"></th:block>
+</div><!-- /#footer -->
+
+<script>
+
+</script>
+</body>
+</html>

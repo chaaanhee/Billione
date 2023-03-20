@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+
+<header th:fragment="header" class="sec_header mt-2">
+    <div class="Artc_header">
+        <div class="artc">
+            <div class="inner account_menu">
+                <a th:href="@{/}" ><h1 id="site-logo" th:text="'Billione'"></h1></a>
+
+                <!-- Customer  start -->
+                <nav class="nav-mine flex align-items-center">
+                    <!-- search start -->
+                    <form method="get" action="/search" class="form-search">
+                        <div class="flex search-border">
+                            <input type="search" name="q" aria-label="검색어 입력란" class="inpt-search">
+                            <button type="submit" class="btn-search">검색</button>
+                        </div>
+                    </form>
+                    <!-- search end -->
+                    <a href="/cart" class="btn-cart">장바구니</a>
+                    <a href="/favor" class="btn-favor">찜</a>
+                    <a href="/member/login" class="btn-mypage"> 마이페이지 <img src="/static/23.01.01/images/header/ic-off.svg"
+                                                                     alt="off" class="state"></a>
+                </nav>
+                <!-- Customer  end -->
+            </div> <!--inner -->
+        </div><!--artc -->
+    </div><!--Artc_header -->
+
+    <div class="Artc_main-tab">
+        <div class="artc bd-bottom">
+            <div class="inner">
+                <div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
+                    <nav class="main-menu swiper-wrapper flex justify-space-between align-items-center mt-2"
+                         style="transform: translate3d(0px, 0px, 0px);">
+                        <a th:href="@{/}" class="swiper-slide active swiper-slide-active">홈</a>
+
+                        <div tabindex="0" class="swiper-slide swiper-slide-next">
+                            <a class="category">카테고리</a>
+                        </div> <!--/ 여기에 넣으세요 찬희!! -->
+                        <a href="/todaydelivery" class="swiper-slide">하루배송</a>
+                        <a href="/event" class="swiper-slide">혜택존</a>
+                        <a th:href="@{/product/product-detail}" class="swiper-slide">베스트</a>
+                        <a href="/newarrival" class="swiper-slide new">신상<sup>5% 할인</sup></a>
+                        <a href="/timedeal" class="swiper-slide">세일</a>
+                        <a href="/shop?tag=trend" class="swiper-slide">스토어</a>
+                    </nav>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div> <!-- /swiper-container -->
+        </div> <!-- /inner -->
+    </div> <!-- /artc -->
+    </div> <!-- /Artc_main-tab -->
+
+</header>
+
+</html>
