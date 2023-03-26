@@ -24,8 +24,9 @@
             <div id="form-con" class="flex my-2">
                 <div id="login-area">
                     <p class="sub-title">회원 로그인</p>
-                    <form th:action="@{/member/loginPost}" th:object="${member}" method="post">
+                    <form th:action="@{/loginPost}" th:object="${member}" method="post">
                     <fieldset class="login_field">
+                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                         <input
                                 id="email"
                                 class="login_input"
@@ -55,13 +56,14 @@
                     <ul class="find_remove">
                         <li><a href="/member/search_id_pw">아이디 찾기</a></li>
                         <li><a href="/member/dormant">비밀번호 찾기</a></li>
-                        <li><a href="/member/join_step1">회원가입</a></li>
+                        <li><a href="/register">회원가입</a></li>
                     </ul>
                 </div> <!-- /login-area -->
 
                 <div id="non-member">
                     <p class="sub-title">비회원 주문조회</p>
-                    <form th:action="@{/member/orderView}" th:object="${member}" method="post">                        <fieldset class="login_field">
+                    <form th:action="@{/member/orderView}" th:object="${member}" method="post">
+                        <fieldset class="non-member-login_field">
                             <input
                                     id="non-member-name"
                                     class="login_input"

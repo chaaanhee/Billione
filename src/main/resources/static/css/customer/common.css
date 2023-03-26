@@ -34,6 +34,9 @@
 .mt-2{
     margin-top: 2rem;
 }
+.mb-2{
+    margin-bottom: 2rem;
+}
 .my-2{
     margin: 2rem 0;
 }
@@ -48,6 +51,15 @@
 }
 .bd-bottom{
     border-bottom: 1px solid #EBEEF2;
+}
+/* layout */
+.col-7 {
+width : 60%;
+}
+@media screen and (max-width: 769px){
+.col-sm-12{
+width : 100%;
+}
 }
 .form-control {
   display: block;
@@ -227,7 +239,7 @@ footer.Sec_footer .foot_border{
     border-bottom: 1px solid #EBEEF2;
 }
 .copyright {
-    text-align:center;
+    text-align:center;o
     margin-top: 4rem;
 }
 .infos-company a {
