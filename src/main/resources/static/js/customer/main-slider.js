@@ -15,12 +15,14 @@ $(function(){
       prevArrow : "<button type='button' class='slick-prev'></button>",
       nextArrow : "<button type='button' class='slick-next'></button>",
       draggable : true,     //드래그 가능 여부
+      variableWidth: true, // 배너 넓이 수정가능
+      centerMode: true, // 배너 가운데부터 스타트
       dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
       responsive: [ // 반응형 웹 구현 옵션
         {
           breakpoint: 960, //화면 사이즈 960px
           settings: {
-            slidesToShow: 4
+            slidesToShow: 3
           }
         },
         {

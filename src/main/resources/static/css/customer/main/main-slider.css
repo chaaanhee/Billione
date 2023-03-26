@@ -37,14 +37,17 @@
 #main-slider .slider-wrap .slick-prev {
     background: url("/img/icon/ic-arrow-prev.png") no-repeat 50%/140%;
     z-index: 99;
-    top: 10vh;
-    left: 31vw;
+    top: 40%;
+    left: 20vw;
 }
 #main-slider .slider-wrap .slick-next {
     background: url("/img/icon/ic-arrow-next.png") no-repeat 50%/140%;
     z-index: 99;
-    top: 10vh;
-    left: 64.5vw;
+    top: 40%;
+    left: 75vw;
+}
+.slick-initialized .slick-slide{
+    width: 800px;
 }
 
 }
