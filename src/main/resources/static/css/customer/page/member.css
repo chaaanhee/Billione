@@ -1,0 +1,97 @@
+/* login */
+.kakao-login{
+    text-align: center;
+    padding: 1rem;
+}
+.kakao-login .kakao-btn{
+    padding: 1rem;
+}
+.kakao-login .kakao-btn a{
+    padding: 1rem 5rem;
+    display: inline-block;
+    background-color: #fae100;
+    border-radius: 10px;
+}
+/** login form **/
+#form-con > div {
+    flex: 1;
+    padding: 2vw 4vw;
+}
+.login_field {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+input.login_input {
+    width:100%;
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff !important;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0.5rem auto;
+    border-radius: 30px;
+}
+#login-area .login_rem{
+    display: flex;
+    column-gap: 10px;
+}
+#form-con ul.find_remove{
+    display: flex;
+    justify-content: center;
+}
+#form-con #login-area ul.find_remove > li {
+    padding : 0 1rem;
+    text-align: center;
+}
+#form-con #login-area ul.find_remove > li:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 12px;
+    margin-top: -5px;
+    background-color: #5f6773;
+}
+@media screen and (min-width: 769px){
+#login-area {
+    border-right: 1px solid #EBEEF2;
+}
+#form-con #login-area ul.find_remove > li {
+    position: relative;
+}
+}
+
+/* register */
+#form-con .form-join{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 1.5rem;
+}
+#form-con .form-join > label{
+    flex : 3;
+}
+#form-con .form-join > input{
+    flex : 9;
+    border-radius: 5px;
+}
+#form-con .form-join > label > span{
+    padding-left: 7px;
+    color: red;
+}
+#form-con .form-join.sns-check > div{
+    flex:9;
+}
+.register_btn{
+    width: 300px;
+}

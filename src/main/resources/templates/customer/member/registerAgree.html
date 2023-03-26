@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- head -->
+<th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
+<!-- page css -->
+<link th:href="@{/css/customer/page/member.css}" rel="stylesheet"/>
+</head>
+<body>
+<!-- header -->
+<th:block th:replace="~{/customer/fragments/common/header :: header}"></th:block>
+
+<div class="contents">
+    <div class="container artc">
+        <div class="inner flex justify-center direction-column align-items-center">
+            <div class="title">
+                <h2>회원가입</h2>
+            </div> <!-- /title -->
+            <div id="form-con" class="col-6 col-sm-12 my-2">
+
+
+            </div><!-- form-con -->
+        </div> <!-- /inner -->
+    </div> <!-- /container -->
+</div> <!--/contents -->
+
+<div id="footer">
+    <th:block th:replace="~{/customer/fragments/common/footer :: footer}"></th:block>
+</div><!-- /#footer -->
+</body>
+</html>

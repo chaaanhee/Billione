@@ -1,0 +1,53 @@
+.post-slider{
+  border:1px solid red;
+}
+.post-slider .post-wrapper{
+  width:84%;
+  height:350px;
+  margin:0px auto;
+  border:1px dashed red;
+}
+.post-slider .post-wrapper .post{
+  width:300px;
+  height:350px;
+  display:inline-block;
+  background:gray;
+}
+#main-slider .slider-wrap ul.slick-dots li button{
+    display:none;
+}
+#main-slider .slider-wrap ul.slick-dots{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+}
+.slick-list{
+    z-index: 1;
+}
+#main-slider .slider-wrap .slick-arrow{
+    width: 62px;
+    height: 62px;
+    padding: 0;
+    opacity: 1;
+    border: 0;
+    position: absolute;
+    }
+@media screen and (min-width: 769px){
+#main-slider .slider-wrap .slick-prev {
+    background: url("/img/icon/ic-arrow-prev.png") no-repeat 50%/140%;
+    z-index: 99;
+    top: 40%;
+    left: 20vw;
+}
+#main-slider .slider-wrap .slick-next {
+    background: url("/img/icon/ic-arrow-next.png") no-repeat 50%/140%;
+    z-index: 99;
+    top: 40%;
+    left: 75vw;
+}
+.slick-initialized .slick-slide{
+    width: 800px;
+}
+
+}
