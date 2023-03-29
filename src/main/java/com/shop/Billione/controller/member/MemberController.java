@@ -1,22 +1,16 @@
 package com.shop.Billione.controller.member;
 
-import com.shop.Billione.dto.LoginDTO;
-import com.shop.Billione.dto.RegisterDTO;
+import com.shop.Billione.dto.member.LoginDTO;
+import com.shop.Billione.dto.member.RegisterDTO;
 import com.shop.Billione.service.MemberService;
-import com.shop.Billione.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("")
@@ -40,10 +34,12 @@ public class MemberController {
     public String mypage(){
         return "/customer/member/mypage";
     }
+
+    /* ******************************POST***************************** */
+
     /*로그인 post*/
     @PostMapping("/loginPost")
     public void loginPost(LoginDTO dto) throws Exception {
-
     }
     /*회원가입 post*/
     @PostMapping("/registerPost")
@@ -52,4 +48,5 @@ public class MemberController {
         memberService.registerMember(dto);
     return "redirect:/login";
     }
+
 }

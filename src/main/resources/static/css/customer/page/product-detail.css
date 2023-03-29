@@ -27,13 +27,13 @@
     font-weight: bold;
     vertical-align: middle;
 }
-#detail-top .detail-info #detail-price-area .detail-price .price span{
-    vertical-align: middle;
-    font-size: 1.8rem;
+#detail-top .detail-info #detail-price-area .detail-price .price span.won{
+    font-size: 1.7rem;
+    margin-left: 0.1rem;
 }
 #detail-top .detail-info #detail-price-area .detail-price .cost{
     font-weight: 400;
-    letter-spacing: 0;
+    letter-spacing: 0.5px;
     font-size: 1.3rem;
     text-decoration: line-through;
     margin-bottom: 5px;

@@ -19,7 +19,7 @@
                     </form>
                     <!-- search end -->
                     <a href="/cart" class="btn-cart">장바구니</a>
-                    <a href="/favor" class="btn-favor">찜</a>
+                    <a th:href="@{/mypage}" class="btn-favor">찜</a>
                     <a href="/login" class="btn-mypage"> 마이페이지 <img src="/static/23.01.01/images/header/ic-off.svg"
                                                                      alt="off" class="state"></a>
                 </nav>
@@ -40,9 +40,15 @@
                             <a class="category">카테고리</a>
                         </div> <!--/ 여기에 넣으세요 찬희!! -->
                         <a href="/todaydelivery" class="swiper-slide">하루배송</a>
-                        <a href="/event" class="swiper-slide">혜택존</a>
-                        <a th:href="@{/product/product-detail}" class="swiper-slide">베스트</a>
-                        <a href="/newarrival" class="swiper-slide new">신상<sup>5% 할인</sup></a>
+                        <a th:href="@{/category}" class="swiper-slide">혜택존
+                                <div class="chat-bubble">
+                                    5% 할인
+                                    <div class="chat-bubble-arrow-border"></div>
+                                    <div class="chat-bubble-arrow"></div>
+                                </div>
+                        </a>
+                        <a th:href="@{/product}" class="swiper-slide">베스트</a>
+                        <a th:href="@{/product/product-detailTest}" class="swiper-slide new">신상</a>
                         <a href="/timedeal" class="swiper-slide">세일</a>
                         <a href="/shop?tag=trend" class="swiper-slide">스토어</a>
                     </nav>

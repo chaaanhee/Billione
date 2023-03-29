@@ -1,6 +1,6 @@
 package com.shop.Billione.entity;
 
-import com.shop.Billione.dto.RegisterDTO;
+import com.shop.Billione.dto.member.RegisterDTO;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @ToString
-@DynamicInsert
+@DynamicInsert //insert시 null 필드를 제외시켜줌
 @Table(name = "member")
 public class MemberEntity {
     @Id

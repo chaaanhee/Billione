@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- head -->
+<th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
+<!-- page css -->
+<link th:href="@{/css/customer/page/product-detail.css}" rel="stylesheet"/>
+    <!-- product gallery css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"  rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"  rel="stylesheet"/>
+
+<!-- page js -->
+<script th:src="@{/js/customer/product/dropdown.js}" defer></script>
+    <!-- product gallery js -->
+<script th:src="@{/js/customer/product/product-gallery.js}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+</head>
+
+<body>
+<!-- header -->
+<th:block th:replace="~{/customer/fragments/common/header :: header}"></th:block>
+
+<div class="contents">
+
+    <div class="container artc my-2">
+        <div class="inner flex justify-space-between direction-column">
+            <div id="detail-top" >
+                <th:block th:replace="~{/customer/fragments/product-detail/detail-topTest :: detail-topTest}"></th:block>
+            </div>  <!-- / detail-top -->
+
+            <div id="detail-mid" >
+                <th:block th:replace="~{/customer/fragments/product-detail/detail-mid :: detail-mid}"></th:block>
+            </div>  <!-- / detail-mid -->
+
+        </div> <!-- /inner -->
+    </div> <!-- /container -->
+
+
+</div> <!-- /contents -->
+
+<div id="footer">
+    <th:block th:replace="~{/customer/fragments/common/footer :: footer}"></th:block>
+</div><!-- /#footer -->
+
+<script>
+
+</script>
+</body>
+</html>

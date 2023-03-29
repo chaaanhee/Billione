@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- head -->
+<th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
+<!-- page css -->
+<link th:href="@{/css/customer/page/product-list.css}" rel="stylesheet"/>
+
+<!-- page js -->
+
+</head>
+
+<body>
+<!-- header -->
+<th:block th:replace="~{/customer/fragments/common/header :: header}"></th:block>
+
+<div class="contents">
+
+    <div class="container artc my-5">
+        <div class="inner flex justify-space-between direction-column">
+            <div id="title-area">
+                <h2>BEST ITEMS</h2>
+                    <p>이번주 가장 많이 사랑받은 아이템</p>
+            </div> <!-- title-area -->
+
+            <!-- list start -->
+            <ul class="prodList">
+                <!-- product Card Start-->
+                <li class="prodCard" th:each="category : ${category}" th:if="${category.categoryNo == 2}">
+                    <a th:href="@{/product/{productNo}(productNo = ${category.productNo})}">
+                         <div class="card">
+                             <div class="thumbnail">
+                                 <img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" alt="Alt">
+                             </div> <!--/ thumbnail -->
+                             <div class="prodInfo mt-1">
+                                 <div class="prodCate" >원피스</div>
+                                 <div class="prodName" th:text="${category.pName}">레이크 무드 주름 롱 원피스</div>
+                                 <div class="prodPrice flex gap-10">
+                                     <div class="cost" th:if="${category.pRate != null}" th:text="${category.pRate}+'%'"></div>
+                                     <div class="price" th:text="${category.pPrice}+'원'">24,770원</div>
+                                 </div> <!--/ prodPrice -->
+                             </div> <!-- prodInfo -->
+                        </div><!--/ card -->
+                    </a>
+                </li>
+                <!-- product Card End-->
+
+            </ul>
+            <!-- list end -->
+
+
+        </div> <!-- /inner -->
+    </div> <!-- /container -->
+
+
+</div> <!-- /contents -->
+
+<div id="footer">
+    <th:block th:replace="~{/customer/fragments/common/footer :: footer}"></th:block>
+</div><!-- /#footer -->
+
+<script>
+
+</script>
+</body>
+</html>

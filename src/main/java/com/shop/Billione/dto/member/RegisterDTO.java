@@ -1,4 +1,4 @@
-package com.shop.Billione.dto;
+package com.shop.Billione.dto.member;
 
 import lombok.*;
 

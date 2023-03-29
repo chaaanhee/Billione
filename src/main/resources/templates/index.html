@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <!-- head -->
 <th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
 <!-- page css -->
+<link th:href="@{/css/customer/page/product-list.css}" rel="stylesheet"/>
 <!-- main slider css -->
 <link th:href="@{/css/customer/main/main-slider.css}" rel="stylesheet"/>
 <!-- page script -->
@@ -25,11 +26,48 @@
     </div> <!-- /main-slider -->
 
     <div class="container artc">
-        <div class="inner flex justify-space-between py-1-5">
-            <p>본문 본문 본문</p>
+        <div class="inner flex justify-space-between direction-column gap-20 py-1-5">
+
+            <div id="title-area" class="pt-3">
+                <h2>BEST ITEMS</h2>
+                <p>이번주 가장 많이 사랑받은 아이템</p>
+            </div> <!-- title-area -->
+
+            <!-- list start -->
+            <ul class="prodList">
+                <!-- product Card Start-->
+                <li class="prodCard" th:each="category : ${category}" th:if="${category.categoryNo == 2}">
+                    <a th:href="@{/product/{productNo}(productNo = ${category.productNo})}">
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" alt="Alt">
+                            </div> <!--/ thumbnail -->
+                            <div class="prodInfo mt-1">
+                                <div class="prodCate" >카테고리</div>
+                                <div class="prodName" th:text="${category.pName}">상품명</div>
+                                <div class="prodPrice flex gap-10">
+                                    <div class="cost" th:if="${category.pRate != null}" th:text="${category.pRate}+'%'">할인율</div>
+                                    <div class="price" th:text="${category.pPrice}+'원'">판매가격</div>
+                                </div> <!--/ prodPrice -->
+                            </div> <!-- prodInfo -->
+                        </div><!--/ card -->
+                    </a>
+                </li>
+                <!-- product Card End-->
+
+            </ul>
+            <!-- list end -->
+
+
         </div> <!-- /inner -->
     </div> <!-- /container -->
 
+    <div sec:authorize="isAuthenticated()">
+
+        <ul>
+            <li th:text="|session = ${#session}|"></li>
+        </ul>
+    </div>
 
 </div> <!-- /contents -->
 
