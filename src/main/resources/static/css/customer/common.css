@@ -40,8 +40,14 @@
 .my-2{
     margin: 2rem 0;
 }
+.my-5{
+    margin: 5rem 0;
+}
 .pt-1{
     padding-top : 1rem;
+}
+.pt-3{
+    padding-top: 3rem;
 }
 .py-1{
    padding: 1rem 0 !important;
@@ -176,6 +182,7 @@ nav.main-menu a{
     text-decoration: none;
     font-weight: bold;
     color : black;
+    position: relative;
 }
 .Artc_main-tab a.swiper-slide sup, .flex_main-tab div.swiper-slide p.category sup {
     font-size: .8rem;
@@ -184,6 +191,82 @@ nav.main-menu a{
     font-weight: 700;
     vertical-align: 5px;
     margin-left: 3px;
+}
+.chat-bubble {
+        background-color: #ff204b;
+        background-color: #ff204b;
+        color: white;
+        border: 2px solid #ff204b;
+        font-size: 0.8rem;
+        line-height: 1.3em;
+        margin: 10px auto;
+        padding: 5px 12px;
+        position: absolute;
+        animation: shake 4s infinite;
+        text-align: center;
+        width: 75px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-box-shadow: 0 0 3px #888;
+        -webkit-box-shadow: 0 0 3px #888;
+        top: -43px;
+        right: -10px;
+}
+.chat-bubble-arrow-border {
+    border-color: #ff204b transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -21px;
+    left: 38%;
+}
+.chat-bubble-arrow {
+    border-color: #ff204b transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -21px;
+    left: 38%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+  10% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  100% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
 }
 
 /* footer */
