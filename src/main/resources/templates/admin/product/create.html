@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- head -->
+<th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
+<!-- page css -->
+<link th:href="@{/css/customer/page/member.css}" rel="stylesheet"/>
+</head>
+<body>
+<!-- header -->
+<th:block th:replace="~{/customer/fragments/common/header :: header}"></th:block>
+
+<div class="contents">
+    <div class="container artc">
+        <div class="inner flex justify-center align-items-center direction-column">
+            <div class="title">
+                <h2>상품등록</h2>
+                <p class="sub-title mt-1">빌리원에 오신 걸 환영합니다!</p>
+            </div> <!-- /title -->
+            <div id="form-con" class="col-7 col-sm-12 my-2">
+                    <form th:action="@{/registerPost}" th:object="${RegisterDTO}" method="post">
+                    <fieldset class="login_field">
+
+                    <div class="form-join">
+                        <label for="join_email">이메일<span>*</span></label>
+                        <input
+                                id="join_email"
+                                class="login_input"
+                                name="email"
+                                placeholder="이메일을 입력해 주세요."
+                                type="email"
+                        />
+                    </div>
+                    <div class="form-join">
+                        <label for="join_password">비밀번호<span>*</span></label>
+                        <input
+                                id="join_password"
+                                class="login_input"
+                                name="password"
+                                placeholder="비밀번호를 입력해 주세요."
+                                type="password"
+                        />
+                    </div>
+
+                    <div class="form-join">
+                        <label for="join_name">이름<span>*</span></label>
+                        <input
+                                id="join_name"
+                                class="login_input"
+                                name="name"
+                                placeholder="이름을 입력해 주세요."
+                                type="text"
+                        />
+                    </div>
+                    <div class="form-join">
+                        <label for="join_phone">전화번호<span>*</span></label>
+                        <input
+                                id="join_phone"
+                                class="login_input"
+                                name="phone"
+                                placeholder="전화번호를 입력해 주세요."
+                                type="text"
+                        />
+                    </div>
+                        <div class="form-join sns-check">
+                            <label for="join_phone">sns수신<span>*</span></label>
+                            <div class="flex gap-20">
+                                <div>
+                                    <input type="radio" name="snsCheck" id="sns-Y" value="Y" class="radio" checked required/>
+                                    <label for="sns-Y">수신하기</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="snsCheck" id="sns-N" value="N" class="radio" required/>
+                                    <label for="sns-N">수신거부</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button class="register_btn" id="register-btn" type="submit" >회원가입 하기</button>
+                </form>
+            </div><!-- form-con -->
+        </div> <!-- /inner -->
+    </div> <!-- /container -->
+</div> <!--/contents -->
+
+<div id="footer">
+    <th:block th:replace="~{/customer/fragments/common/footer :: footer}"></th:block>
+</div><!-- /#footer -->
+</body>
+</html>
