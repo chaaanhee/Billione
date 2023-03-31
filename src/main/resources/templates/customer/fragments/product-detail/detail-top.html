@@ -25,10 +25,10 @@
                     <div id="detail-category"><a th:href="@{/}">카테고리</a></div>
                     <div th:text="${product.pName}" id="detail-prod-name" >상품이름</div>
                     <div id="detail-price-area" class="flex justify-space-between">
-                        <div class="detail-price flex gap-20 align-items-end">
+                        <div class="detail-price flex gap-10 align-items-end">
                             <div th:if="${product.pRate != null}" th:text="${product.pRate}+'%'" class="rate">할인율</div>
-                            <div class="price"><span th:text="${product.pPrice}">8,000</span><span class="won">원</span></div>
-                            <div th:text="${product.pCost}+'원'" class="cost">10,000원</div>
+                            <div class="price"><span th:text="${#numbers.formatInteger(product.pPrice, 3, 'COMMA')}">8,000</span><span class="won">원</span></div>
+                            <div th:if="${product.pCost != null}" th:text="${#numbers.formatInteger(product.pCost, 3, 'COMMA') + '원'}" class="cost"></div>
                         </div> <!--/ detail-price -->
                         <div class="detail-coupon">
                             <a th:href="@{/}" class="coupon-btn">쿠폰받기</a>

@@ -23,7 +23,6 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductRepository productRepository;
-    ProductService productService;
 
     @GetMapping("")
     public String detailPage(){
@@ -35,8 +34,6 @@ public class ProductController {
     public String product(@PathVariable("productNo") Long productNo, Model model){
         ProductEntity product = productRepository.findById(productNo).get();
         model.addAttribute("product", product);
-
-        //model.addAttribute("product", productRepository.findOne(productNo));
         return "/customer/product/product-detail";
     }
 

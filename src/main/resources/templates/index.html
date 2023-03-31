@@ -46,7 +46,7 @@
                                 <div class="prodCate" >카테고리</div>
                                 <div class="prodName" th:text="${category.pName}">상품명</div>
                                 <div class="prodPrice flex gap-10">
-                                    <div class="cost" th:if="${category.pRate != null}" th:text="${category.pRate}+'%'">할인율</div>
+                                    <div class="rate" th:if="${category.pRate != null}" th:text="${category.pRate}+'%'">할인율</div>
                                     <div class="price" th:text="${category.pPrice}+'원'">판매가격</div>
                                 </div> <!--/ prodPrice -->
                             </div> <!-- prodInfo -->

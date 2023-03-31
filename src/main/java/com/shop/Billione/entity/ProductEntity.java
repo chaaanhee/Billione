@@ -33,8 +33,6 @@ public class ProductEntity {
     private Integer pPrice;
     @Column(length = 30)
     private Integer pCost;
-    @Column(length = 30)
-    private Integer pDiscount;
     @CreationTimestamp
     @Column(nullable = false,  columnDefinition = "TIMESTAMP DEFAULT now()")
     private Timestamp pUpdated;

@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CategoryController {
     @Autowired
     private ProductRepository productRepository;
-    ProductService productService;
 
     /*카테고리 페이지*/
     @GetMapping("")

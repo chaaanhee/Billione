@@ -9,5 +9,4 @@ import com.shop.Billione.vo.ProductVO;
 import java.util.List;
 
 public interface ProductService {
-    public List<ProductEntity> findProduct();
 }

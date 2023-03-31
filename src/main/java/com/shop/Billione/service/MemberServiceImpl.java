@@ -35,9 +35,4 @@ public class MemberServiceImpl implements MemberService {
         log.info("******서비스끝!!!!*******" + savedId);
         return savedId;
     }
-
-    @Override
-    public List<MemberEntity> findMembers() {
-        return memberRepository.findAll();
-    }
 }

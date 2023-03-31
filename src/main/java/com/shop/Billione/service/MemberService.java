@@ -8,5 +8,4 @@ import java.util.List;
 public interface MemberService {
     Long registerMember(RegisterDTO registerDTO) throws Exception ;
 
-    public List<MemberEntity> findMembers();
 }

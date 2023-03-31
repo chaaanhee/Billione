@@ -20,8 +20,6 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService{
     @Autowired
     private ProductRepository productRepository;
-    @Override
-    public List<ProductEntity> findProduct() {
-    return productRepository.findAll();
-    }
+
+
 }

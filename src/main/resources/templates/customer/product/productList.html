@@ -35,8 +35,9 @@
                                  <div class="prodCate" >원피스</div>
                                  <div class="prodName" th:text="${category.pName}">레이크 무드 주름 롱 원피스</div>
                                  <div class="prodPrice flex gap-10">
-                                     <div class="cost" th:if="${category.pRate != null}" th:text="${category.pRate}+'%'"></div>
-                                     <div class="price" th:text="${category.pPrice}+'원'">24,770원</div>
+                                     <div class="rate" th:if="${category.pRate != null}" th:text="${category.pRate}+'%'"></div>
+                                     <div class="price" th:text="${#numbers.formatInteger(category.pPrice, 3, 'COMMA') + '원'}">상품금액</div>
+
                                  </div> <!--/ prodPrice -->
                              </div> <!-- prodInfo -->
                         </div><!--/ card -->

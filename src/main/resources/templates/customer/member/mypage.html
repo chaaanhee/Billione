@@ -16,19 +16,14 @@
                 <h2>마이페이지</h2>
                 <p class="sub-title mt-1">빌리원에 오신 걸 환영합니다!</p>
             </div> <!-- /title -->
+
             <div id="form-con" class="col-7 col-sm-12 my-2">
                     <form th:action="@{/registerPost}" th:object="${RegisterDTO}" method="post">
                     <fieldset class="login_field">
 
-                    <div class="form-join">
-                        <label for="join_email">이메일<span>*</span></label>
-                        <input
-                                id="join_email"
-                                class="login_input"
-                                name="email"
-                                placeholder="이메일을 입력해 주세요."
-                                type="email"
-                        />
+                    <div class="form-join" >
+                        <p>이메일 주소</p>
+                        <p>이메일 주소 나와 </p>
                     </div>
                     <div class="form-join">
                         <label for="join_password">비밀번호<span>*</span></label>
