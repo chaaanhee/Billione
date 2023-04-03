@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 
+
 public class PrincipalDetails implements UserDetails {
     private MemberEntity member; //콤포지션
     public PrincipalDetails(MemberEntity member){
@@ -25,15 +26,18 @@ public class PrincipalDetails implements UserDetails {
     // 해당 user의 권한을 리턴하는 곳
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+
         // member의 role이 String 타입이라 GrantedAuthority타입으로 형변환 시켜줘야 함.
         Collection<GrantedAuthority> collect = new ArrayList<>();
-        collect.add(new GrantedAuthority() {
+       collect.add(new GrantedAuthority() {
             @Override
             public String getAuthority() {
-                return member.getRole();
+                return member.getRole().getDescription();
             }
         });
         return collect;
+
+
     }
 
     @Override

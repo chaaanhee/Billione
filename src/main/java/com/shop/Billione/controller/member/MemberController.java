@@ -2,23 +2,27 @@ package com.shop.Billione.controller.member;
 
 import com.shop.Billione.dto.member.LoginDTO;
 import com.shop.Billione.dto.member.RegisterDTO;
+import com.shop.Billione.entity.MemberEntity;
+import com.shop.Billione.repository.MemberRepository;
 import com.shop.Billione.service.MemberService;
+import com.shop.Billione.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("")
 @Log4j2
 @RequiredArgsConstructor // 생성자 주입
+@SessionAttributes("customerNo")
 public class MemberController {
     @Autowired
     MemberService memberService;
+    @Autowired
+    MemberRepository memberRepository;
     /*로그인 페이지*/
     @GetMapping("/login")
     public String login(){
@@ -29,11 +33,15 @@ public class MemberController {
     public String register(){
         return "/customer/member/register";
     }
-    /*회원가입 페이지*/
+
+    /*마이페이지*/
     @GetMapping("/mypage")
-    public String mypage(){
+    public String mypage(Model model){
+        model.addAttribute("user", new MemberVO());
         return "/customer/member/mypage";
     }
+
+
 
     /* ******************************POST***************************** */
 

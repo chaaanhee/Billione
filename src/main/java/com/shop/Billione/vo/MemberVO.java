@@ -16,7 +16,7 @@ public class MemberVO {
     private String name;
     private String phone;
     private String snsCheck;
-    private String identifier;
+    private String role;
     private String customerRank;
     private Timestamp enrollDate;
     private String withdraw;

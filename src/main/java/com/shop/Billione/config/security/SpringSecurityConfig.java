@@ -2,7 +2,6 @@ package com.shop.Billione.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -10,8 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
-import java.net.PasswordAuthentication;
 
 @Configuration
 @EnableWebSecurity
@@ -34,7 +31,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                     .antMatchers("/mypage/**").authenticated()
-                    .antMatchers("/admin/**").hasAuthority("admin")
+                    .antMatchers("/admin/**").hasRole("admin")
                     .anyRequest().permitAll()
                     .and()
                 .formLogin()

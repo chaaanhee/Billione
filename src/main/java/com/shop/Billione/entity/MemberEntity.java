@@ -1,5 +1,6 @@
 package com.shop.Billione.entity;
 
+import com.shop.Billione.Role;
 import com.shop.Billione.dto.member.RegisterDTO;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
@@ -32,9 +33,8 @@ public class MemberEntity {
     private String phone;
     @Column(length = 1, nullable = false)
     private String snsCheck;
-    @ColumnDefault("'U'")
-    @Column(length = 1)
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
     @ColumnDefault("'B'")
     @Column(length = 1)
     private String customerRank;
@@ -54,6 +54,7 @@ public class MemberEntity {
         registerEntity.setName(registerDTO.getName());
         registerEntity.setPhone(registerDTO.getPhone());
         registerEntity.setSnsCheck(registerDTO.getSnsCheck());
+        registerEntity.setRole(Role.member);
         return registerEntity;
 
     }

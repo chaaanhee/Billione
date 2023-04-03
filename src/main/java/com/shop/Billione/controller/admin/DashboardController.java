@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor // 생성자 주입
 public class DashboardController {
     @GetMapping("")
-    public String login(){
+    public String admin(){
         return "/admin/dashboard";
     }
 
