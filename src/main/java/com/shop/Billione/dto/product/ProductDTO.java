@@ -15,6 +15,7 @@ public class ProductDTO {
     private Integer pPrice;
     private Integer pCost;
     private Integer pDiscount;
+    private Integer pRate;
     private Timestamp pUpdated;
     private Integer pQty;
     private String pDesc;

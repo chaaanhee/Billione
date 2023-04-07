@@ -1,7 +1,9 @@
 package com.shop.Billione.config.security;
 
+import com.shop.Billione.Handler.UserLoginSuccessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -23,7 +25,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception{
         web
                 .ignoring()
-                .antMatchers( "/css/**", "/js/**", "/img/**","/lib/**","/scss/**","/vendor/**");
+                .antMatchers( "/css/**", "/js/**", "/img/**","/lib/**");
     }
     /*로그인 설정*/
     @Override
@@ -48,7 +50,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                     .invalidateHttpSession(true) // 로그아웃 후 세션 초기화 설정
                     .deleteCookies("JSESSIONID") // 로그아웃 후 쿠기 삭제 설정
                     .and()
-                .exceptionHandling(); //인증인가 예외발생시 처리
+                .exceptionHandling()//인증인가 예외발생시 처리
+                    .and()
+                .sessionManagement()
+                .maximumSessions(1) // 최대 허옹 가능 세션 수(default 1)
+                .maxSessionsPreventsLogin(true) // 중복 로그인 true:현재사용자인증실패 & (default)false:이전 로그인이 풀린다.
+                .expiredUrl("/login"); // 세션이 만료된 경우 이동 할 페이지
+    }
+
+    @Bean
+    public UserLoginSuccessHandler userLoginSuccessHandler(){
+        return new UserLoginSuccessHandler();
     }
 
 

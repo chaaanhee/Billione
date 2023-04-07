@@ -6,21 +6,21 @@
 
             <div class="product-lg-gallery">
                 <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" alt="Alt"></a>
-                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image2_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image2_M.jpeg" alt="Alt"></a>
-                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image3_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image3_M.jpeg" alt="Alt"></a>
-                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image4_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image4_M.jpeg" alt="Alt"></a>
+                <a href="https://image.brandi.me/cproduct/2023/03/30/SB000000000090661482_1680160189_image1_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/30/SB000000000090661482_1680160189_image1_M.jpeg" alt="Alt"></a>
+                <a href="https://image.brandi.me/cproduct/2023/03/20/SB000000000089567635_1679330060_image1_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/20/SB000000000089567635_1679330060_image1_M.jpeg" alt="Alt"></a>
+                <a href="https://image.brandi.me/cproduct/2023/03/30/SB000000000090675042_1680164231_image1_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/30/SB000000000090675042_1680164231_image1_M.jpeg" alt="Alt"></a>
             </div>
             <div class="product-sm-gallery">
                 <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" alt="Alt"></div>
-                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image2_M.jpeg" alt="Alt"></div>
-                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image3_M.jpeg" alt="Alt"></div>
-                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image4_M.jpeg" alt="Alt"></div>
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/30/SB000000000090661482_1680160189_image1_M.jpeg" alt="Alt"></div>
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/20/SB000000000089567635_1679330060_image1_M.jpeg" alt="Alt"></div>
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/30/SB000000000090675042_1680164231_image1_M.jpeg" alt="Alt"></div>
             </div>
 
         </div> <!-- product-gallery -->
 
         <div class="detail-info">
-            <form th:action="@{/order/cart}" th:object="${order}" method="post">
+            <form th:action="@{/order/cart}" th:object="${product}" method="post">
                 <fieldset class="cart_field">
                     <div id="detail-category"><a th:href="@{/}">카테고리</a></div>
                     <div th:text="${product.pName}" id="detail-prod-name" >상품이름</div>

@@ -21,56 +21,56 @@
                     <fieldset class="login_field">
 
                     <div class="form-join">
-                        <label for="join_email">이메일<span>*</span></label>
+                        <label th:for="join_email">이메일<span>*</span></label>
                         <input
-                                id="join_email"
+                                th:id="join_email"
                                 class="login_input"
-                                name="email"
+                                th:name="email"
                                 placeholder="이메일을 입력해 주세요."
                                 type="email"
                         />
                     </div>
                     <div class="form-join">
-                        <label for="join_password">비밀번호<span>*</span></label>
+                        <label th:for="join_password">비밀번호<span>*</span></label>
                         <input
-                                id="join_password"
+                                th:id="join_password"
                                 class="login_input"
-                                name="password"
+                                th:name="password"
                                 placeholder="비밀번호를 입력해 주세요."
                                 type="password"
                         />
                     </div>
 
                     <div class="form-join">
-                        <label for="join_name">이름<span>*</span></label>
+                        <label th:for="join_name">이름<span>*</span></label>
                         <input
-                                id="join_name"
+                                th:id="join_name"
                                 class="login_input"
-                                name="name"
+                                th:name="name"
                                 placeholder="이름을 입력해 주세요."
                                 type="text"
                         />
                     </div>
                     <div class="form-join">
-                        <label for="join_phone">전화번호<span>*</span></label>
+                        <label th:for="join_phone">전화번호<span>*</span></label>
                         <input
-                                id="join_phone"
+                                th:id="join_phone"
                                 class="login_input"
-                                name="phone"
+                                th:name="phone"
                                 placeholder="전화번호를 입력해 주세요."
                                 type="text"
                         />
                     </div>
                         <div class="form-join sns-check">
-                            <label for="join_phone">sns수신<span>*</span></label>
-                            <div class="flex gap-20">
+                            <label for="join_sns">sns수신<span>*</span></label>
+                            <div class="flex gap-20" id="join_sns">
                                 <div>
-                                    <input type="radio" name="snsCheck" id="sns-Y" value="Y" class="radio" checked required/>
-                                    <label for="sns-Y">수신하기</label>
+                                    <input type="radio" name="snsCheck" th:id="sns-Y" value="Y" class="radio" checked required/>
+                                    <label th:for="sns-Y">수신하기</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="snsCheck" id="sns-N" value="N" class="radio" required/>
-                                    <label for="sns-N">수신거부</label>
+                                    <input type="radio" name="snsCheck" th:id="sns-N" value="N" class="radio" required/>
+                                    <label th:for="sns-N">수신거부</label>
                                 </div>
                             </div>
                         </div>

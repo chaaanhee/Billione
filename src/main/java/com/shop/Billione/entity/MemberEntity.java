@@ -33,6 +33,7 @@ public class MemberEntity {
     private String phone;
     @Column(length = 1, nullable = false)
     private String snsCheck;
+    @ColumnDefault("'member'")
     @Enumerated(EnumType.STRING)
     private Role role;
     @ColumnDefault("'B'")
@@ -54,7 +55,6 @@ public class MemberEntity {
         registerEntity.setName(registerDTO.getName());
         registerEntity.setPhone(registerDTO.getPhone());
         registerEntity.setSnsCheck(registerDTO.getSnsCheck());
-        registerEntity.setRole(Role.member);
         return registerEntity;
 
     }

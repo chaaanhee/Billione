@@ -8,6 +8,7 @@ public class ProductVO {
     private String pName;
     private Integer pPrice;
     private Integer pCost;
+    private Integer pRate;
     private Integer pDiscount;
     private Timestamp pUpdated;
     private Integer pQty;
