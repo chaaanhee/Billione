@@ -22,6 +22,9 @@
 .direction-column{
     flex-direction: column;
 }
+.gap-5{
+ column-gap: 5px;
+}
 .gap-10{
  column-gap: 10px;
 }
@@ -57,6 +60,9 @@
 }
 .bd-bottom{
     border-bottom: 1px solid #EBEEF2;
+}
+.pink-color{
+    color: #FF365D;
 }
 /* layout */
 .col-7 {
@@ -128,7 +134,7 @@ button{
     justify-content: space-between;;
 }
 /* account-menu */
-.Artc_header .btn-cart, .Artc_header .btn-favor, .Artc_header .btn-mypage{
+.Artc_header .btn-cart, .Artc_header .btn-favor, .Artc_header .btn-my{
     display: block;
     position: relative;
     width: 48px;
@@ -146,9 +152,16 @@ button{
 .Artc_header .btn-favor, .btn-favor-ico {
     background-image: url("/img/icon/ic-favorite.svg");
 }
-.Artc_header .btn-mypage{
+.Artc_header .btn-my{
     background-image: url("/img/icon/ic-my.svg");
 }
+header .btn-my .state{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    width: 20px;
+    height: 12px;
+    }
 /* search btn */
 .form-search{
     margin-right: 1.5vw;
@@ -322,7 +335,7 @@ footer.Sec_footer .foot_border{
     border-bottom: 1px solid #EBEEF2;
 }
 .copyright {
-    text-align:center;o
+    text-align:center;
     margin-top: 4rem;
 }
 .infos-company a {

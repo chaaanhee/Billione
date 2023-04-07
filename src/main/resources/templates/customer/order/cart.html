@@ -3,7 +3,7 @@
 <!-- head -->
 <th:block th:replace="~{/customer/fragments/common/head :: head}"></th:block>
 <!-- main slider css -->
-<link th:href="@{/css/customer/page/product-detail.css}" rel="stylesheet"/>
+<link th:href="@{/css/customer/page/cart.css}" rel="stylesheet"/>
 <!-- page css -->
 </head>
 
@@ -18,10 +18,143 @@
             <div class="title">
                 <h2>장바구니</h2>
             </div> <!-- /title -->
-            <div id="datail-top">
+            <div id="cart-top">
 
+                <div class="check-area cart-border-b flex justify-space-between">
+                    <div class="all-check">
+                        <input id="all-check" name="all-check" type="checkbox" checked>
+                        <label for="all-check">전체선택<span>(1/1)</span></label>
+                    </div>
+                    <div class="check-btn-area flex gap-5">
+                        <button class="cart_delall check-btn">선택해제</button>
+                        <button class="cart_delsold check-btn">품절삭제</button>
+                    </div><!-- /check-btn -->
+                </div><!-- /check-area -->
 
-            </div>  <!-- / detail-top -->
+                <div class="general-shipping my-2">일반배송</div><!-- /general-shipping -->
+
+                <div class="prod-info">
+                    <table width="100%">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="45%">
+                            <col width="30%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th><input name="partial-check" type="checkbox" checked></th>
+                            <th>상품정보</th>
+                            <th>옵션</th>
+                            <th>상품금액</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input name="prod-check" type="checkbox" checked></td>
+                            <td class="prod-info flex gap-10">
+                                <div class="cart-prod-img"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg"></div><!--/prod-cart-img -->
+                                <div class="prodInfo-detail">
+                                    <p class="cart-category">카테고리</p>
+                                    <p class="cart-prodName">[당일발송!/1+1+1/무조건쟁이기] 프렌치 유넥 라운드넥 베이직 면 코튼 기본 긴팔 티셔츠 11 color</p>
+                                    <div class="price-wrap flex gap-10">
+                                        <span class="discount-percent pink-color">7%</span>
+                                        <span class="discount-price">20,180원</span>
+                                        <span class="price">21,700원</span>
+                                    </div>
+                                </div><!--/prodInfo-detail -->
+                            </td>
+                            <td>
+                                <div class="optionName"><p>필수옵션 : 01.무광 매트 꼬임 집게핀_브라운</p></div> <!--optionName -->
+                                <div class="option-bottom flex justify-space-between align-items-end mt-1">
+                                    <div class="optionCnt">
+                                        <button type="button" class="minus">감소</button>
+                                        <input type="text" class="inp" value="1" />
+                                        <button type="button" class="plus">증가</button>
+                                    </div> <!-- optionCnt -->
+                                    <div class="optionPrice">29,000원</div> <!--optionPrice -->
+                                </div> <!--/option-bottom-->
+                            </td>
+                            <td>
+                                <div class="optionPrice">29,000원</div> <!--optionPrice -->
+                                <div class="detail-coupon">
+                                    <a href="/" class="coupon-btn">쿠폰받기</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input name="prod-check" type="checkbox" checked></td>
+                            <td class="prod-info flex gap-10">
+                                <div class="cart-prod-img"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg"></div><!--/prod-cart-img -->
+                                <div class="prodInfo-detail">
+                                    <p class="cart-category">카테고리</p>
+                                    <p class="cart-prodName">[당일발송!/1+1+1/무조건쟁이기] 프렌치 유넥 라운드넥 베이직 면 코튼 기본 긴팔 티셔츠 11 color</p>
+                                    <div class="price-wrap flex gap-10 align-items-end">
+                                        <span class="discount-percent pink-color">7%</span>
+                                        <span class="discount-price">20,180원</span>
+                                        <span class="price">21,700원</span>
+                                    </div>
+                                </div><!--/prodInfo-detail -->
+                            </td>
+                            <td>
+                                <div class="optionName"><p>필수옵션 : 01.무광 매트 꼬임 집게핀_브라운</p></div> <!--optionName -->
+                                <div class="option-bottom flex justify-space-between align-items-end mt-1">
+                                    <div class="optionCnt">
+                                        <button type="button" class="minus">감소</button>
+                                        <input type="text" class="inp" value="1" />
+                                        <button type="button" class="plus">증가</button>
+                                    </div> <!-- optionCnt -->
+                                    <div class="optionPrice">29,000원</div> <!--optionPrice -->
+                                </div> <!--/option-bottom-->
+                            </td>
+                            <td>
+                                <div class="optionPrice">29,000원</div> <!--optionPrice -->
+                                <div class="detail-coupon">
+                                    <a href="/" class="coupon-btn">쿠폰받기</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div> <!-- /prod-info -->
+            </div>  <!-- / cart-top -->
+
+            <div class="scroll-prompt mt-2" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+                <div class="scroll-prompt-arrow-container">
+                    <div class="scroll-prompt-arrow"><div></div></div>
+                    <div class="scroll-prompt-arrow"><div></div></div>
+                </div>
+            </div>
+
+            <div id="cart-bottom" class="flex justify-center">
+                <div class="calculate">
+                    <div class="flex gap-4r justify-center">
+                        <div class="productPrice">
+                            <p class="small">총 삼품금액</p>
+                            <p class="large">58,000원</p>
+                        </div><!--productPrice -->
+                        <div class="totalDiscount">
+                            <p class="small">할인예정금액</p>
+                            <p class="large">8,000원</p>
+                        </div><!--totalDiscount -->
+                        <div class="totalShipping">
+                            <p class="small">배송비</p>
+                            <p class="large">무료배송</p>
+                        </div><!--totalShipping -->
+                    </div> <!--/flex -->
+                </div> <!-- calculate -->
+                <div class="totalPrice">
+                    <p class="large">총 결제금액</p>
+                    <p class="large pink-color">58,000원</p>
+                </div><!--totalPrice -->
+            </div> <!-- / cart-bottom -->
+
+            <div class="checkOut-area pt-3">
+                <button class="">구매하기</button>
+            </div> <!--checkOut-area -->
+
 
         </div> <!-- /inner -->
     </div> <!-- /container -->
@@ -34,7 +167,34 @@
 </div><!-- /#footer -->
 
 <script>
-
+//수량 옵션
+$('.optionCnt :button').on({
+    'click' : function(e){
+        e.preventDefault();
+        var $count = $(this).parent('.optionCnt').find('.inp');
+        var now = parseInt($count.val());
+        var min = 1;
+        var max = 999;
+        var num = now;
+        if($(this).hasClass('minus')){
+            var type = 'm';
+        }else{
+            var type = 'p';
+        }
+        if(type=='m'){
+            if(now>min){
+                num = now - 1;
+            }
+        }else{
+            if(now<max){
+                num = now + 1;
+            }
+        }
+        if(num != now){
+            $count.val(num);
+        }
+    }
+});
 </script>
 </body>
 </html>
