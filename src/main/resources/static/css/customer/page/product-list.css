@@ -1,0 +1,58 @@
+/* title */
+#title-area{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#title-area h2 {
+    font-size: 2.5rem;
+}
+#title-area p {
+    font-size: 1.2rem;
+}
+/* list */
+.prodCard{
+    width: 280px;
+    display: inline-block;
+    margin: 1.5rem 0.52rem;
+    vertical-align: top;
+}
+.prodCard .prodInfo .prodCate{
+    color: #808893;
+    font-size: 0.9rem;
+    margin: 1rem 0 0.5rem;
+}
+.prodCard .prodInfo .prodName{
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.prodCard .prodInfo .prodPrice{
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+.prodCard .prodInfo .prodPrice .rate{
+    color: #ff204b;
+}
+.prodCard .thumbnail{
+    width: 280px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.prodCard .thumbnail img{
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    -ms-transition: 0.8s;
+    transition: 0.8s;
+}
+.prodCard .thumbnail img:hover {
+    -moz-transform: scale(1.3) rotate(0deg);
+    -webkit-transform: scale(1.3) rotate(0deg);
+    -o-transform: scale(1.3) rotate(0deg);
+    -ms-transform: scale(1.3) rotate(0deg);
+    transform: scale(1.3) rotate(0deg);
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    -ms-transition: 0.8s;
+    transition: 0.8s;
+}

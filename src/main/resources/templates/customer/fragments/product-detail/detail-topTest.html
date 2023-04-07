@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns="">
+
+    <div th:fragment="detail-topTest" class="flex">
+        <div class="product-detail-gallery">
+
+            <div class="product-lg-gallery">
+                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" alt="Alt"></a>
+                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image2_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image2_M.jpeg" alt="Alt"></a>
+                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image3_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image3_M.jpeg" alt="Alt"></a>
+                <a href="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image4_M.jpeg" class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image4_M.jpeg" alt="Alt"></a>
+            </div>
+            <div class="product-sm-gallery">
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image1_M.jpeg" alt="Alt"></div>
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image2_M.jpeg" alt="Alt"></div>
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image3_M.jpeg" alt="Alt"></div>
+                <div class="item-slick"><img src="https://image.brandi.me/cproduct/2023/03/03/SB000000000087029637_1677840540_image4_M.jpeg" alt="Alt"></div>
+            </div>
+
+        </div> <!-- product-gallery -->
+
+        <div class="detail-info">
+            <form th:action="@{/order/cart}" th:object="${order}" method="post">
+                <fieldset class="cart_field">
+                    <div id="detail-category"><a th:href="@{/}">테스트</a></div>
+                    <div id="detail-prod-name">[당일발송!/1+1+1/무조건쟁이기] 프렌치 유넥 라운드넥 베이직 면 코튼 기본 긴팔 티셔츠 11 color</div>
+                    <div id="detail-price-area" class="flex justify-space-between">
+                        <div class="detail-price flex gap-20 align-items-end">
+                            <div class="rate">10%</div>
+                            <div class="price">8,000<span>원</span></div>
+                            <div class="cost">10,000원</div>
+                        </div> <!--/ detail-price -->
+                        <div class="detail-coupon">
+                            <a th:href="@{/}" class="coupon-btn">쿠폰받기</a>
+                        </div>
+                    </div> <!-- / detail-price-area -->
+                    <div class="point-area"><span>1% 적립 (80원)</span></div>
+
+                    <div class="review-area py-1 flex gap-20">
+                        <div class="total-reviews">25개 리뷰 보기</div>
+                        <div class="total-sales">269개 구매중</div>
+                    </div><!-- / review-area -->
+
+                    <div class="shipping-area flex gap-20 py-1-5">
+                        <div class="delivery-title">배송정보</div>
+                        <div class="delivery-info">일반배송</div>
+                    </div><!-- / shipping-area -->
+
+                    <div class="detail-option py-1-5">
+                        <div class="dropdown">
+                            <div class="select">
+                                <span>컬러를 선택해주세요</span>
+                            </div>
+                            <input type="hidden" name="gender">
+                            <ul class="dropdown-menu">
+                                <li id="black">블랙</li>
+                                <li id="blue">블루</li>
+                                <li id="yellow">옐로우</li>
+                                <li id="pink">핑크</li>
+                            </ul>
+                        </div>
+
+                    </div> <!--/ detail-option -->
+
+                    <div class="total-price-area pt-1">
+                        <dl class="wrap-price flex justify-space-between">
+                            <dt>총 상품 금액</dt>
+                            <dd><span>0</span>원</dd>
+                        </dl>
+                    </div><!-- total-price-area -->
+                </fieldset>
+
+                <div id="button-area" class="flex align-items-center gap-10">
+                    <button class="check-out-btn" id="check-out-btn" type="submit" >바로 구매하기</button>
+                    <a href="#" id="btn_cart_ico" class="btn-cart-ico"><span class="txt">장바구니</span></a>
+                    <a href="#" id="btn_favor_ico" class="btn-favor-ico"><span class="txt">찜</span></a>
+                </div>
+            </form>
+        </div> <!-- / detail-info -->
+
+
+    </div>  <!-- / fragment=datail-top -->
+
+</html>
